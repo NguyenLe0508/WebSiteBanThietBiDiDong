@@ -1,0 +1,472 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E98FBDE7-99CF-404B-9646-1C3B0306C9AC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BTL_asp</RootNamespace>
+    <AssemblyName>BTL_asp</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\css\all.min.css" />
+    <Content Include="assets\css\fontawesome.min.css" />
+    <Content Include="assets\css\style-main.css" />
+    <Content Include="assets\css\style-login.css" />
+    <Content Include="assets\css\chitietlap.css" />
+    <Content Include="assets\css\chitietphone.css" />
+    <Content Include="assets\css\style-subpage.css" />
+    <Content Include="assets\css\style-signup.css" />
+    <Content Include="assets\css\style-cart.css" />
+    <Content Include="assets\images\ads\MACBOOK_MACMINI-TEXT_690X300.png" />
+    <Content Include="assets\images\ads\Rightbanner-640x278-02_2.png" />
+    <Content Include="assets\images\logo\facebook1.png" />
+    <Content Include="assets\images\logo\google1.png" />
+    <Content Include="assets\images\logo\icon-sale.png" />
+    <Content Include="assets\images\logo\logo 364364.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\inphone12-125gb-25490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphon11-64gb-17390000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphon12mini-64gb-18490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphon12mini256gb-21490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphon12promax-128gb-32390000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone11-128gb-17490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone11-256gb-21990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12-128gb-29390000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12-64gb-22990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12mini-128gb-20290000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12pro-256gb-32990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12pro-512gb-37990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12promax.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12promax1-512gb-40990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphone12promax2-512gb-40990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphonepromax-256gb-32990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphonese1-128gb-11790000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphonese2-256gb-13490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Iphone\iphonexr1-65bg-11990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realme6i.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realme6pro.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realme7.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realme7i.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realme7pro.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec11.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec12.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec15.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec17.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec20.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmec3-%283gb-32gb%29.png" />
+    <Content Include="assets\images\product\Dienthoai\Realme\realmei5-%284gb-64gb%29.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxy s21 ultras5g-30990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya11-3000000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya20%284-128gb%29-3990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya21s%283-32gb%29-4590000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya31-5990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya50s-5990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya51%286gb-128gb%29-7490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya52-5g.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya70-7190000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxya71-8490000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxym21-5100000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxym21s.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxynote10+-15990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxynote20-20990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxynote20ultra-26990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxys20-173900000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxys21+5g-25990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxys21ultras5g-30990000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxyzflold2 dặc biệt 5g-60000000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxyzflold25g-50000000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsunggalaxyzplip-36000000.png" />
+    <Content Include="assets\images\product\Dienthoai\Samsung\samsungnote10lite-11190000.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartactive3-6gb.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartaris-%286gb-64gb%29.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartaris-%288gb-128gb%29.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartarispro.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartjoy4-6gb.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartlive4.png" />
+    <Content Include="assets\images\product\Dienthoai\Vsmart\vsmartstart4.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\pocof2pro-5g-%286gb-128gb%29.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiamiredmi9c-2350000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiamiredminote9-3g-%283gb-64gb%29-3500000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiamiredminote9-4400000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomif2pro-5g-%286gb-128gb%29-9200000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomimi10tpro-5g-%288gb-128gb%29-10600000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomimi10tpro-5g-11600000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomimi11.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiminote10lite.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiminote10pro.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomipocox3nfc-5600000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomipocpx3nfc-128gb-6150000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiredmi9-%283gb-32gb%29-3050000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiredmi9a-1900000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiredmi9c-%283gb-64gb%29-2700000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiredminote9-64gb-5750000.png" />
+    <Content Include="assets\images\product\Dienthoai\Xiaomi\xiaomiredminote9pro-128gb-6200000.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS GAMING ROG G152.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS GAMING ROG GA401L.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS GAMING ROG STRIX x.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS GAMING ROG STRIX.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS TUF GAMING.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS VIVOBOOK S533EQ.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS ZENBOOK UX425J.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS ZENBOOK UX435EA.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS ZENBOOK UX435EG.png" />
+    <Content Include="assets\images\product\Laptop\Asus\LT ASUS ZENBOOK.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LAPTOP DELL VOSTRO 3405.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL GAMING G3 15 3500.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL GAMING G5 5500.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL INSPIRON 3593.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL INSPIRON 5490.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL INSPIRON 5502 1XR11.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL INSPIRON 7306.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL INSPRION 14 5406.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL VOOSTRO 5301 C4VV91.png" />
+    <Content Include="assets\images\product\Laptop\Dell\LT DELL VOSTRO 5502.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP 348 G7 9PG80PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Envy NEW 2020 13-BA1027TU 2K0B1PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Envy NEW 2020 13-BA1030TU 2K0B6PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Pavilion 14-CE3013TU 8QN72PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Pavilion 15-EG0071TU 2P1M7PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Pavilion x360 14-DW1018TU 2H3N6PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP Pavilion x360 14-DW1019TU 2H3N7PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP ProBook 430 G7 9GQ00PA.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP ProBook 430 G7 9GQ03P.png" />
+    <Content Include="assets\images\product\Laptop\HP\Laptop HP ProBook 455 G7 1A1A9PA.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MacBook Air M1 -512GB.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB Air 13 inch MQD32.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB AIR 13.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB air m1-256gb.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB PRO 13 touch bar i5 1.4-256GB.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB PRO 13 touch bar i5 1.4-512.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB Pro 13 touch bar m1-256GB.png" />
+    <Content Include="assets\images\product\Laptop\MacBook\MCB Pro 13 touch bar m1-512GB.png" />
+    <Content Include="assets\images\product\phụ kiện\bàn phím apple magic keyboard 2.png" />
+    <Content Include="assets\images\product\phụ kiện\bàn phím không dây logitech k480.png" />
+    <Content Include="assets\images\product\phụ kiện\bộ kích sóng wifi xiaomi pro.png" />
+    <Content Include="assets\images\product\phụ kiện\chuột apple magic mouse 2.png" />
+    <Content Include="assets\images\product\phụ kiện\chột khong dây logitech m238 marvel collection.png" />
+    <Content Include="assets\images\product\phụ kiện\cáp anker power line II lightning%283ft.0.9m%29a8432.png" />
+    <Content Include="assets\images\product\phụ kiện\cáp mophie usb_c to lightning mf1 1m.png" />
+    <Content Include="assets\images\product\phụ kiện\củ sạc xiaomi zmi ha716 type c 20w pd.png" />
+    <Content Include="assets\images\product\phụ kiện\pin aukey pb-xn10 10000ah usb-c.png" />
+    <Content Include="assets\images\product\phụ kiện\pin aukey qc 3.0 _ pd 18w 10000mah xd-12.png" />
+    <Content Include="assets\images\product\phụ kiện\pin energizer 10000 mah -ue10045.png" />
+    <Content Include="assets\images\product\phụ kiện\pin golf candy 10000 mah g80.png" />
+    <Content Include="assets\images\product\phụ kiện\pin sdp anker powercore select 10000mah a1223.png" />
+    <Content Include="assets\images\product\phụ kiện\pin sdp xiaomi redmi 2000mah 18w.png" />
+    <Content Include="assets\images\product\phụ kiện\pin xiaomi 20000 mah gen3 type-c 2019.png" />
+    <Content Include="assets\images\product\phụ kiện\sạc anker powerport mini 12w 2 cổng -a2620.png" />
+    <Content Include="assets\images\product\phụ kiện\sạc macbook apple 30w usb-c power adapte.png" />
+    <Content Include="assets\images\product\phụ kiện\sạc mophie power delivery 18w 1usd-c.png" />
+    <Content Include="assets\images\product\phụ kiện\sạc nhanh anker powerport III NANO 20W A2633.png" />
+    <Content Include="assets\images\product\phụ kiện\thiết bị phát wifi di động tp-linh m7350.png" />
+    <Content Include="assets\images\product\sound\apple airpods max %28nb.345%29.png" />
+    <Content Include="assets\images\product\sound\apple earpods lightning%28mmtn2%29%28na.147%29.png" />
+    <Content Include="assets\images\product\sound\beats solo pro%28nb.330%29.png" />
+    <Content Include="assets\images\product\sound\bluetooth apple airpods 2 vn a%28nb.229%29.png" />
+    <Content Include="assets\images\product\sound\bluetooth apple airpods pro vn a %28nb.241%29.png" />
+    <Content Include="assets\images\product\sound\bluetooth powerbeat pro%28nb.199%29.png" />
+    <Content Include="assets\images\product\sound\bluetooth samsung galaxy buds pro%28nb.343%29.png" />
+    <Content Include="assets\images\product\sound\JBL C150SI%28NA.111%29.png" />
+    <Content Include="assets\images\product\sound\LOA bluetooth JBL CHARGE 4.png" />
+    <Content Include="assets\images\product\sound\LOA bluetooth JBL FLIP 5.png" />
+    <Content Include="assets\images\product\sound\LOA bluetooth JBL GO +.png" />
+    <Content Include="assets\images\product\sound\LOA bluetooth JBL GO 2.png" />
+    <Content Include="assets\images\product\sound\LOA bluetooth JBL GO 3.png" />
+    <Content Include="assets\images\product\sound\loa sony srs-xb22 extra bass%28lb.114%29.png" />
+    <Content Include="assets\images\product\sound\loa sony srs-xb31 extra bass%28lb.082%29.png" />
+    <Content Include="assets\images\product\sound\loa sony srs-xb32 extra bass%28lb.115%29.png" />
+    <Content Include="assets\images\product\sound\loa sony srs-xb33 extra bass%28lb.178%29.png" />
+    <Content Include="assets\images\product\sound\loa sony srs-xb43 extra bass%28lb.179%29.png" />
+    <Content Include="assets\images\product\sound\sony mdr-xb55ap%28na.070%29.png" />
+    <Content Include="assets\images\product\sound\sony wf_100xm3.png" />
+    <Content Include="assets\images\product\sound\sony wh -1000xm4%28nb.294%29.png" />
+    <Content Include="assets\images\product\sound\xiaomi mi basic %28na.127%29.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad 10.2 2019 WiFi 32GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad 10.2 2020 4G 128GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad 10.2 2020 WiFi 128GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad 10.2 2020 WiFi 32GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Air 10.9 2020 4G 256GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Air 10.9 2020 4G 64GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Air 10.9 2020 WiFi 256GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Air 10.9 2020 WiFi 64GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad gen 9.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Pro 11 2020 4g 128GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Pro 11 2020 WiFi 128GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Pro 11 2020 WiFi 256GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Pro 12.9 2020 4G 128GB.png" />
+    <Content Include="assets\images\product\Tablet\Apple iPad Pro 12.9 2020 WiFi 256GB.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab A 10.1 T515 %282019%29.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab A8 8  T295 %282019%29.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab M62.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab S6 Lite.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab S6.png" />
+    <Content Include="assets\images\product\Tablet\Samsung Galaxy Tab with S Pen %28P205%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch SE 40mm %284G%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch SE 40mm %28GPS%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch SE 44mm %284G%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 5 40mm %284G%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 40mm %284G%29 dây thép vàng.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 40mm %284G%29 dây thép.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 40mm %284G%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 40mm %28GPS%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 44mm %284G%29.png" />
+    <Content Include="assets\images\product\Watch\Apple Watch Series 6 44mm %28GPS%29.png" />
+    <Content Include="assets\images\product\Watch\Huami Amazfit GTR 42mm.png" />
+    <Content Include="assets\images\product\Watch\Huami Amazfit GTR 47mm Nhôm.png" />
+    <Content Include="assets\images\product\Watch\HUAMI AMAZFIT GTR2 đen dây silicon.png" />
+    <Content Include="assets\images\product\Watch\Huami Amazfit GTS 2%28PKDH.071%29.png" />
+    <Content Include="assets\images\product\Watch\Huami Amazfit T-Rex.png" />
+    <Content Include="assets\images\product\Watch\Samsung Galaxy Watch 3.png" />
+    <Content Include="assets\images\product\Watch\SAMSUNG GALAXY WATCH ACTIVE2 hồng vỏ thép.png" />
+    <Content Include="assets\images\product\Watch\SAMSUNG GALAXY WATCH ACTIVE2 hồng.png" />
+    <Content Include="assets\images\product\Watch\SAMSUNG GALAXY WATCH ACTIVE2 đen vỏ nhôm.png" />
+    <Content Include="assets\images\product\Watch\SAMSUNG GALAXY WATCH ACTIVE2 đen vỏ thép.png" />
+    <Content Include="assets\images\logo\flash.gif" />
+    <Content Include="assets\images\logo\logo_red.png" />
+    <Content Include="assets\images\pay\alepay-Logo.png" />
+    <Content Include="assets\images\pay\logo-ATM.png" />
+    <Content Include="assets\images\pay\logo-mpos.png" />
+    <Content Include="assets\images\pay\Master-card-fix.png" />
+    <Content Include="assets\images\pay\momo-logo.png" />
+    <Content Include="assets\images\pay\Visa-Card.png" />
+    <Content Include="assets\images\pay\vnpay-logo.png" />
+    <Content Include="assets\images\pay\ZaloPay_Logo.png" />
+    <Content Include="assets\images\logo\logo.png" />
+    <Content Include="assets\images\logo\logochutrang.png" />
+    <Content Include="assets\images\slide\IP-11_690X300.png" />
+    <Content Include="assets\images\slide\REDMI-9_690X300-n.png" />
+    <Content Include="assets\images\slide\Sliding-690x300-iPad.png" />
+    <Content Include="assets\js\script-signup.js" />
+    <Content Include="assets\js\script-login.js" />
+    <Content Include="assets\js\script-cart.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="assets\webfonts\fa-brands-400.svg" />
+    <Content Include="assets\webfonts\fa-regular-400.svg" />
+    <Content Include="assets\webfonts\fa-solid-900.svg" />
+    <Content Include="chitietlaptop.aspx" />
+    <Content Include="deleteCart.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config" />
+    <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="signup.aspx" />
+    <Content Include="chitietphone.aspx" />
+    <Content Include="phone.aspx" />
+    <Content Include="laptop.aspx" />
+    <Content Include="iphone.aspx" />
+    <Content Include="laptopdell.aspx" />
+    <Content Include="cart.aspx" />
+    <Content Include="logout.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="chitietlaptop.aspx.cs">
+      <DependentUpon>chitietlaptop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitietlaptop.aspx.designer.cs">
+      <DependentUpon>chitietlaptop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="deleteCart.aspx.cs">
+      <DependentUpon>deleteCart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="deleteCart.aspx.designer.cs">
+      <DependentUpon>deleteCart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="product.cs" />
+    <Compile Include="slx1sp.cs" />
+    <Compile Include="user.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="signup.aspx.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="signup.aspx.designer.cs">
+      <DependentUpon>signup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="chitietphone.aspx.cs">
+      <DependentUpon>chitietphone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="chitietphone.aspx.designer.cs">
+      <DependentUpon>chitietphone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="phone.aspx.cs">
+      <DependentUpon>phone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="phone.aspx.designer.cs">
+      <DependentUpon>phone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="laptop.aspx.cs">
+      <DependentUpon>laptop.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="laptop.aspx.designer.cs">
+      <DependentUpon>laptop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="iphone.aspx.cs">
+      <DependentUpon>iphone.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="iphone.aspx.designer.cs">
+      <DependentUpon>iphone.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="laptopdell.aspx.cs">
+      <DependentUpon>laptopdell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="laptopdell.aspx.designer.cs">
+      <DependentUpon>laptopdell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\webfonts\fa-brands-400.eot" />
+    <Content Include="assets\webfonts\fa-brands-400.ttf" />
+    <Content Include="assets\webfonts\fa-brands-400.woff" />
+    <Content Include="assets\webfonts\fa-brands-400.woff2" />
+    <Content Include="assets\webfonts\fa-regular-400.eot" />
+    <Content Include="assets\webfonts\fa-regular-400.ttf" />
+    <Content Include="assets\webfonts\fa-regular-400.woff" />
+    <Content Include="assets\webfonts\fa-regular-400.woff2" />
+    <Content Include="assets\webfonts\fa-solid-900.eot" />
+    <Content Include="assets\webfonts\fa-solid-900.ttf" />
+    <Content Include="assets\webfonts\fa-solid-900.woff" />
+    <Content Include="assets\webfonts\fa-solid-900.woff2" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65257</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:65257/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
